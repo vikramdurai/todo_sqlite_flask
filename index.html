@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>A Better To Do App</title>
+	</head>
+	
+	<body>
+		{% if todos %}
+			<table>
+				<tr>
+					<thead>Name&nbsp;&nbsp;&nbsp;&nbsp;</thead>
+					<thead>Published</thead><br>
+				</tr>
+			{% for tod in todos %}
+				<tr>
+					<tbody>{{ tod.name }}&nbsp;&nbsp;&nbsp;&nbsp;</tbody>
+					<tbody>{{ tod.publ }}</tbody><br><br>
+				</tr>
+			{% endfor %}
+			</table>
+		{% else %}
+			<h2>No todos.</h2>
+		{% endif %}
+		<a href="/new">New todo</a>
+	</body>
+</html>
